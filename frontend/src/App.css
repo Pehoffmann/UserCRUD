@@ -1,0 +1,443 @@
+/*========================= Global ======================== */
+
+:root {
+  --amarelo: #ffc400;
+  --azul: #00b7ff;
+  --vermelho: #cf2e2e;
+  --branco: #fff;
+  --chumbo: #3e3e3e;
+  --cinza: #eee;
+  --preto: #000;
+  --delete: #ff0000;
+}
+
+a {
+  color: var(--vermelho);
+  text-decoration: none;
+}
+
+.header,
+footer {
+  background: rgb(207, 46, 46);
+  background: linear-gradient(
+    90deg,
+    rgba(207, 46, 46, 1) 40%,
+    rgba(175, 57, 57, 1) 58%,
+    rgba(156, 62, 62, 1) 70%,
+    rgba(148, 72, 72, 1) 100%
+  );
+  color: var(--branco);
+  margin: 0;
+  max-height: 76px;
+  min-height: 40px;
+  padding: 16px;
+  text-align: center;
+  width: -webkit-fill-available;
+}
+
+.error {
+  border-color: #ff0000;
+}
+
+/*========================= Header ======================== */
+
+.header {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.header__title {
+  font-size: 16px;
+}
+
+.header__nav a {
+  color: var(--branco);
+  font-weight: bolder;
+}
+
+.header__nav a:hover {
+  color: var(--chumbo);
+}
+
+.header__nav a:hover::after {
+  color: var(--branco);
+}
+
+.header__nav a:not(:last-child)::after {
+  content: " | ";
+}
+
+/*========================= Main ======================== */
+
+main {
+  min-height: calc(100vh - 180px);
+  padding: 16px;
+}
+
+.main-section__title {
+  font-size: 24px;
+}
+
+.main-section__subtitle {
+  color: var(--chumbo);
+  font-size: 20px;
+}
+
+.main-section__description {
+  color: var(--chumbo);
+  font-size: 16px;
+}
+
+/*========================= Buttons ======================== */
+
+.pages__btn--selected {
+  background-color: var(--vermelho);
+  border: 1px solid var(--vermelho);
+  color: var(--branco);
+  margin-right: 4px;
+  margin-top: 8px;
+  padding: 4px 8px;
+}
+
+.form__btns {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.form__btns input[type="submit"] {
+  background-color: var(--vermelho);
+  border: none;
+  color: var(--branco);
+  display: inline-block;
+  font-weight: bolder;
+  text-align: center;
+  margin: 8px 0;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.form__btns input[type="submit"]:hover {
+  background-color: var(--chumbo);
+  color: var(--branco);
+  cursor: pointer;
+}
+
+.cta__btn {
+  background-color: var(--vermelho);
+  border: none;
+  color: var(--branco);
+  display: inline-block;
+  font-weight: bolder;
+  text-align: center;
+  margin: auto;
+  padding: 6px 12px;
+}
+
+.cta__btn:hover {
+  background-color: var(--chumbo);
+  color: var(--vermelho);
+  cursor: pointer;
+}
+
+#searchUserSection form .form__btns button {
+  margin: 8px 0 0;
+}
+
+.users .btn {
+  border: none;
+  font: inherit;
+  outline: inherit;
+  padding: 5px;
+  display: inline-block;
+  width: 20%;
+  margin-right: 2px;
+}
+
+.users .btn:hover {
+  cursor: pointer;
+}
+
+.users .user__see--btn {
+  background-color: var(--azul);
+  color: var(--branco);
+}
+
+.users .user__see--btn:hover {
+  background-color: var(--chumbo);
+  color: var(--azul);
+}
+
+.users .user__edit--btn {
+  background-color: var(--amarelo);
+  color: var(--chumbo);
+}
+
+.users .user__edit--btn:hover {
+  background-color: var(--chumbo);
+  color: var(--amarelo);
+}
+
+.users .user__delete--btn {
+  background-color: var(--delete);
+  color: var(--branco);
+}
+
+.users .user__delete--btn:hover {
+  background-color: var(--chumbo);
+  color: var(--delete);
+}
+
+/*========================= Search ======================== */
+
+.hidden {
+  background-color: transparent;
+  color: transparent;
+  height: 0;
+  line-height: 0;
+  margin: 0;
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
+  padding: 0;
+  visibility: hidden;
+  width: 0;
+}
+
+#searchUserSection {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 16px;
+  float: right;
+}
+
+#searchUserSection form {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  min-height: 45px;
+}
+
+#searchUserSection .order-by.form__input-container,
+#searchUserSection form .form__input-container {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 16px;
+}
+
+#searchUserSection .order-by.form__input-container label,
+#searchUserSection form .form__input-container label {
+  color: var(--chumbo);
+}
+
+#searchUserSection .order-by.form__input-container select,
+#searchUserSection form .form__input-container input,
+#searchUserSection form .form__input-container select:not(.hidden) {
+  margin: 0;
+  padding: 4px 8px;
+}
+
+/*========================= Footer ======================== */
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+}
+
+.footer-list {
+  position: unset;
+  bottom: unset;
+}
+
+.footer__title {
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+/*========================= Pagination ======================== */
+
+#listPaginationSection {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+#listPaginationSection .current-page {
+  margin: 8px auto 8px 0;
+}
+
+#listPaginationSection .pages {
+  margin: 8px auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#listPaginationSection .pages__btn {
+  background-color: var(--branco);
+  border: 1px solid var(--vermelho);
+  color: var(--vermelho);
+  margin-right: 4px;
+  margin-top: 8px;
+  padding: 4px 8px;
+}
+
+/*========================= Register ======================== */
+
+.register-user,
+.edit-user {
+  display: block;
+  min-height: calc(100vh - 180px);
+}
+
+.register-user__title,
+.edit-user__title {
+  font-size: 24px;
+}
+
+.register-user__subtitle,
+.edit-user__subtitle {
+  color: var(--chumbo);
+  font-size: 20px;
+}
+
+.register-user .form,
+.edit-user .form {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  border-radius: 16px;
+  margin: 24px auto;
+  min-width: max-content;
+  padding: 15px;
+  width: 25vw;
+}
+
+.register-user .form__input-container,
+.edit-user .form__input-container {
+  display: block;
+  margin: 16px auto;
+}
+
+.register-user .form__input-container label,
+.edit-user .form__input-container label {
+  color: var(--chumbo);
+  display: block;
+  padding-bottom: 6px;
+}
+
+.register-user .form__input-container input,
+.edit-user .form__input-container input,
+.register-user .form__input-container select,
+.edit-user .form__input-container select {
+  display: block;
+  max-width: calc(100vw - 64px);
+  padding: 4px 8px;
+  width: -webkit-fill-available;
+}
+
+.form__option-container {
+  display: flex;
+  margin: auto;
+}
+
+/*========================= Cards ======================== */
+
+.users {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.users .card-list {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  border-radius: 16px;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  text-align: center;
+  padding: 10px;
+  flex: 1 0 20%;
+}
+
+.card-list p {
+  text-align: left;
+  font-size: 14px;
+}
+
+.card-list h1 {
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.card-list h4 {
+  font-weight: 400;
+  margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+/*========================= MediaQueries ======================== */
+@media only screen and (min-width: 320px) {
+  .users .card-list {
+    flex: 1 0 95%;
+  }
+  .register-user .form,
+  .edit-user .form {
+    width: 75vw;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .header {
+    flex-flow: row wrap;
+  }
+
+  #searchUserSection {
+    flex-flow: row nowrap;
+    max-height: 80px;
+  }
+
+  #searchUserSection form {
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    min-height: 45px;
+  }
+
+  #searchUserSection .order-by.form__input-container,
+  #searchUserSection form .form__input-container {
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+
+  #searchUserSection .order-by.form__input-container select,
+  #searchUserSection form .form__input-container input.search-param,
+  #searchUserSection form .form__input-container input.search-value,
+  #searchUserSection form .form__input-container select#searchRole {
+    min-width: 196px;
+    width: 196px;
+  }
+
+  .users .card-list {
+    flex: 1 0 45%;
+  }
+}
+
+@media screen and (min-width: 984px) {
+  .users .card-list {
+    flex: 1 0 20%;
+  }
+  .register-user .form,
+  .edit-user .form {
+    width: 25vw;
+  }
+}
