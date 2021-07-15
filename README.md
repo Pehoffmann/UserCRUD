@@ -2,7 +2,7 @@
   🚀<br>UserCRUD
 </h1>
 
-![Screenshot]()
+![Screenshot](https://raw.githubusercontent.com/Pehoffmann/UserCRUD/main/backend/public/images/actionsysCRUD.png)
 
 Nesse desafio foi criado um projeto simples, onde se pode
 criar, consultar, editar e excluir funcionários a partir de um banco de
